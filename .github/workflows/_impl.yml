@@ -1,0 +1,90 @@
+# education.manifest.yml
+version: 1
+project: "Education System — Seed Kit"
+sequence:
+  - key: 00-charter
+    path: docs/00-Project-Charter.md
+    title: Project Charter
+    must_include:
+      - "# Project Charter"
+      - "## Purpose"
+      - "## Scope"
+      - "## Non-Negotiables"
+      - "## Risks"
+      - "## Definition of Done"
+  - key: 01-readme
+    path: README.md
+    title: Repository README
+    must_include:
+      - "# Education System — Seed Kit"
+      - "## Quickstart"
+      - "## Folder Map"
+      - "## License"
+  - key: 02-roadmap
+    path: ROADMAP.md
+    title: Roadmap
+    must_include:
+      - "# Roadmap"
+      - "## Phases"
+      - "## Milestones"
+      - "## Release Criteria"
+  - key: 03-gamification-design
+    path: docs/03-Gamification-Design.md
+    title: Gamification Design (Overlay-first)
+    must_include:
+      - "# Gamification Design"
+      - "## Evolutionary Learning Arc"
+      - "## Zero-Harm Mechanics"
+      - "## Offline Mode"
+      - "## Assessment as Narrative"
+  - key: 04-ei-framework
+    path: docs/04-Emotional-Intelligence-Framework.md
+    title: Emotional Intelligence Framework
+    must_include:
+      - "# Emotional Intelligence Framework"
+      - "## Core Competencies"
+      - "## Rituals & Reflections"
+      - "## Safety & Consent"
+  - key: 05-low-resource-deploy
+    path: deployment/05-Low-Resource-Deploy.md
+    title: Low-Resource Deployment Guide
+    must_include:
+      - "# Low-Resource Deployment"
+      - "## Offline-first"
+      - "## SMS/USSD Options"
+      - "## Paper Fallbacks"
+  - key: 06-teacher-kit
+    path: classroom-tools/Teacher-Start-Kit.md
+    title: Teacher Start Kit
+    must_include:
+      - "# Teacher Start Kit"
+      - "## Day 1 Setup"
+      - "## First Week Flow"
+      - "## Parent/Guardian Brief"
+  - key: 07-student-kit
+    path: classroom-tools/Student-Start-Kit.md
+    title: Student Start Kit
+    must_include:
+      - "# Student Start Kit"
+      - "## Onboarding"
+      - "## First Quest"
+      - "## Reflection Prompts"
+  - key: 08-governance
+    path: docs/08-Governance-Model.md
+    title: Governance Model (Zero-Harm + Stewardship)
+    must_include:
+      - "# Governance"
+      - "## Roles"
+      - "## Decision Loops"
+      - "## Safeguards"
+  - key: 09-ipfs-ots
+    path: .github/workflows/education-validator.yml
+    title: CI Validator Workflow
+    must_include:
+      - "name: Education Validator"
+      - "on:"
+      - "jobs:"
+placeholders:
+  token: "<<FILLME>>"
+  min_chars: 250
+status_file: STATUS.md
