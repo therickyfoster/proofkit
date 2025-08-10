@@ -1,0 +1,26 @@
+name: Proofs (Reusable)
+
+on:
+  workflow_call:
+    inputs:
+      snapshot_exclude:
+        required: false
+        type: string
+        default: ".git/** .github/workflows/** proofs/** node_modules/** **/*.ots"
+    secrets:
+      WEB3_STORAGE_TOKEN:
+        required: true
+      ARWEAVE_JWK:
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    uses: therickyfoster/proofkit/.github/workflows/_impl.yml@v1
+    with:
+      snapshot_exclude: ${{ inputs.snapshot_exclude }}
+    secrets:
+      WEB3_STORAGE_TOKEN: ${{ secrets.WEB3_STORAGE_TOKEN }}
+      ARWEAVE_JWK:       ${{ secrets.ARWEAVE_JWK }}
